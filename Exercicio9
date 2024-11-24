@@ -1,0 +1,28 @@
+//Dentro do algoritmo principal (main), solicite ao usuário um número inteiro e chame a função
+exibirPares, passando o número fornecido como argumento. Utilize um laço de repetição (while ou for)
+dentro da função para exibir os números pares.
+Exemplo: Caso o usuário digite o número 10, o algoritmo deve exibir como resposta: 2, 4, 6, 8, 10. 9.
+// Isabela Orçati
+#include <stdio.h>
+// Função para exibir os números pares até o número fornecido.
+void exibirPares(int numero) {
+// Usando um laço de repetição para exibir os números pares
+int i = 2; // Inicia com o primeiro número par
+while (i <= numero) {
+printf("%d", i); // Exibe o número par
+if (i + 2 <= numero) {
+printf(", "); // Se não for o último, coloca uma vírgula
+}
+i += 2; // Incrementa de 2 em 2
+}
+printf("\n"); // Pula para a próxima linha após os números
+}
+int main() {
+int numero;
+// Solicita um número ao usuário
+printf("Digite um número inteiro: ");
+scanf("%d", &numero);
+// Chama a função para exibir os números pares até o número fornecido
+exibirPares(numero);
+return 0;
+}
