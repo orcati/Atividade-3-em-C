@@ -1,0 +1,30 @@
+//Faça um programa que chama uma função para calcular a média aritmética de 4 notas de um aluno,
+imprima a média e mensagem aprovado se média maior ou igual a 7 e reprovado caso contrário.
+// Isabela Orçati
+#include <stdio.h>
+// Função que calcula a média das quatro notas fornecidas.
+float media(float nota1, float nota2, float nota3, float nota4) {
+// Coleta as notas inseridas pelo usuário.
+printf("Digite a nota 1: ");
+scanf("%f", &nota1);
+printf("Digite a nota 2: ");
+scanf("%f", &nota2);
+printf("Digite a nota 3: ");
+scanf("%f", &nota3);
+printf("Digite a nota 4: ");
+scanf("%f", &nota4);
+// Calcula e retorna a média das notas.
+return (nota1 + nota2 + nota3 + nota4) / 4;
+}
+int main() {
+float M; // Variável que armazenará a média.
+M = media(0, 0, 0, 0); // Chama a função media para calcular a média das 4 notas.
+printf("A média é: %.2f\n", M); // Exibe o resultado da média.
+// Verifica se a média é maior ou igual a 7 para determinar se o aluno foi aprovado.
+if (M >= 7.0) {
+printf("Aprovado!\n");
+} else {
+printf("Reprovado!\n"); // Caso a média seja inferior a 7.
+}
+return 0;
+}
