@@ -1,0 +1,24 @@
+//Escreva um algoritmo em C que utiliza uma função para exibir todos os números pares de 1 até um
+número fornecido pelo usuário. A função deve ter a seguinte assinatura:
+void exibirPares(int numero);
+// Isabela Orçati
+#include <stdio.h>
+// Função para exibir os números pares de 2 até um número fornecido.
+void exibirPares(int numero) {
+for (int i = 2; i <= numero; i += 2) {
+printf("%d", i);
+if (i + 2 <= numero) {
+printf(", ");
+}
+}
+printf("\n");
+}
+int main() {
+int numero;
+// Solicita um número ao usuário.
+printf("Digite um número inteiro: ");
+scanf("%d", &numero);
+// Chama a função para exibir os números pares até o número fornecido.
+exibirPares(numero);
+return 0;
+}
