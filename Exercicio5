@@ -1,0 +1,19 @@
+//Escreva um algoritmo em C que utilize uma função para exibir todos os números ímpares de 1 até um
+número fornecido pelo usuário, exceto os múltiplos de 7.
+// Isabela Orçati
+#include <stdio.h>
+// Função que exibe números ímpares de 1 até n, excluindo múltiplos de 7.
+void exibirImpares(int n) {
+for (int i = 1; i <= n; i++) {
+if (i % 2 != 0 && i % 7 != 0) { // Verifica se o número é ímpar e não múltiplo de 7.
+printf("%d ", i); // Exibe o número ímpar .
+}
+}
+}
+int main() {
+int num; // Variável para o número máximo inserido pelo usuário.
+printf("Digite um número: ");
+scanf("%d", &num); // Coleta o número fornecido pelo usuário.
+exibirImpares(num); // Chama a função para exibir os números ímpares.
+return 0;
+}
