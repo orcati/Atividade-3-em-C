@@ -1,0 +1,36 @@
+// Isabela Orçati
+#include <stdio.h>
+typedef struct {
+double peso;
+int idade;
+double altura;
+} pessoa; // A estrutura pessoa contém as variáveis peso, idade e altura.
+void coletarDados(Pessoa pessoas[], int numPessoas) {
+for (int i = 0; i < numPessoas; i++) {
+printf("Digite a idade da pessoa %d: "
+, i + 1);
+scanf("%d"
+, &pessoas[i].idade);
+printf("Digite a altura da pessoa %lf (em metros): "
+, i + 1);
+scanf("%lf"
+, &pessoas[i].altura);
+printf("Digite o peso da pessoa %lf (em quilogramas): "
+, i + 1);
+scanf("%lf"
+, &pessoas[i].peso);
+}
+}
+int main() {
+pessoa pessoas[5], p1; // Um vetor de pessoas é criado, assim como a variável p1.
+pessoas[0].peso = 80.6; // Peso da primeira pessoa é atribuído manualmente.
+pessoas[0].idade = 40; // Idade da primeira pessoa é atribuída manualmente.
+pessoas[0].altura = 1.70; // Altura da primeira pessoa é atribuída manualmente.
+p1 = pessoas[0]; // A variável p1 recebe os dados da posição 0 do vetor .
+if (p1.idade > 20) {
+p1.idade++; // A idade de p1 é incrementada em 1.
+pessoas[1] = pessoas[0]; // Os dados da posição 0 são copiados para a posição 1.
+coletarDados(pessoas, 5); // A função coletarDados é chamada para preencher o restante dos dados.
+}
+return 0;
+}
